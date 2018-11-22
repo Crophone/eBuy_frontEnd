@@ -1,0 +1,49 @@
+<zan-panel>
+  <view class='zan zan__detail zan__detail-row'>
+    <view class='zan__left-col zan-font-22 zan-font-bold'>{{name}}
+    </view>
+    <text class='zan__right-col'>{{phone}}
+  </text>
+  </view>
+  <view class='zan zan__detail zan__detail-row'>{{address}}</view>
+</zan-panel>
+
+<zan-panel>
+  <view class='zan zan__detail zan-font-22 zan-font-bold'> 交易信息 </view>
+  <view class='zan'>
+    <view class='zan__detail'>
+      <block wx:for="{{goods}}" wx:key="name">
+        <view class='zan__detail-row'>
+          <view class='zan__right-col'>¥{{item.price}} x{{item.number}}</view>
+          <view class='zan__left-col'>{{item.name}}</view>
+        </view>
+      </block>
+      <view class='zan__detail-row zan-font-bold'>
+        <view class='zan__right-col'>¥220</view>
+        <view class='zan__left-col'>总价</view>
+      </view>
+    </view>
+  </view>
+</zan-panel>
+
+<zan-panel>
+  <view class='zan zan__detail zan-font-22 zan-font-bold'> 订单信息 </view>
+  <view class='zan zan__detail zan__detail-row'>
+    <view class='zan__left-col'>订单状态：{{status}}
+    </view>
+  </view>
+  <view class='zan zan__detail zan__detail-row'>
+    <view class='zan__left-col'>下单时间：{{order_time}}
+    </view>
+  </view>
+  <view class='zan zan__detail zan__detail-row'>
+    <view class='zan__left-col'>付款方式：{{pay_way}}
+    </view>
+  </view>
+  <view class='zan zan__detail zan__detail-row'>
+    <view class='zan__left-col'>订单备注：{{remark}}
+    </view>
+  </view>
+  <view class='zan zan__detail zan__detail-row'>订单编号：{{id}}
+  </view>
+</zan-panel>

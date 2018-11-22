@@ -1,0 +1,22 @@
+<block wx:for="{{orders}}" wx:key="order_id">
+  <zan-panel>
+    <navigator url="../order_detail/order_detail?id={{item.order_id}}">
+      <view class="orders">
+        <view class="orders__detail">
+          <block wx:for="{{item.goods}}" wx:for-item="good" wx:key="name">
+            <view class="orders__detail-row">
+              <view class="orders__right-col">¥ {{good.price}}</view>
+              <view class="orders__left-col">
+                {{good.name}} x{{good.number}}
+              </view>
+            </view>
+          </block>
+          <view class='orders__detail-row'>
+            <view class='orders__right-col zan-font-bold zan-font-16'>总价：{{item.total_price}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </zan-panel>
+</block>

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/detail/detail",
     "pages/monitor/monitor",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/orders/orders",
+    "pages/order_detail/order_detail"
   ],
   "window":{
     "backgroundTextStyle":"light",

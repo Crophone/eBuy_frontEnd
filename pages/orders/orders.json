@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "zan-card": "../../zanui/card/index",
+    "zan-panel": "../../zanui/panel/index"
+  },
+  "navigationBarTitleText": "我的订单"
+}
