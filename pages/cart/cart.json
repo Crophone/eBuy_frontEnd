@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-card": "../../dist/card/index",
+    "van-panel": "../../dist/panel/index",
+    "van-button": "../../dist/button/index",
+    "van-stepper": "../../dist/stepper/index",
+    "van-submit-bar": "../../dist/submit-bar/index",
+    "van-notify": "../../dist/notify/index"
+  },
+  "navigationBarTitleText": "购物车"
+}

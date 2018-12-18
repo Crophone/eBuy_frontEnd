@@ -1,0 +1,57 @@
+<!--pages/detail/detail.wxml-->
+<view id='good_detail'>
+  <!-- <form bindsubmit='bindsubmit'>
+    <view class='form-group'>
+      <image class='detail_image' name='good_image' src='{{image}}' mode='aspectFit'></image>
+    </view>
+
+    <view class='detail_price'>
+      <view style='padding:15px;' class='form-group'>
+        <text class='zan-font-18 zan-font-bold zan-c-red'>{{price}}</text>
+        <input name="price" maxlength="100" value="{{price}}" disabled='disabled' />
+      </view>
+    </view>
+
+    <view class='detail_descripe'>
+      <view style='padding:15px;'>
+        <text class='zan-font-18 zan-font-bold'>{{desc}}</text>
+        <input name="description" maxlength="100" value="{{price}}" disabled='disabled' />
+      </view>
+    </view>
+
+
+    <view class='section'>
+      <button form-type='submit'>加入购物车</button>
+      <button>立即购买</button>
+    </view>
+  </form> -->
+  <view>
+   <image class='image' mode='top' src="{{image_url}}"></image>
+  </view>
+    <view>{{good_name}}</view>
+  <view>单价 ¥{{good_price}}</view>
+
+
+  <view>{{good_description}}</view>
+  <view>
+  购买数
+   <van-stepper id='{{good_id}}' value="{{good_num}}" min="0" bind:change="onChange" />
+  </view>
+  <view>
+  <van-goods-action>
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="addToCart"
+  />
+
+       <van-goods-action-button
+    text="立即购买"
+    bind:click="buyOneGood"
+  />
+
+</van-goods-action>
+  </view>
+
+</view>
+<van-notify id="van-notify" />

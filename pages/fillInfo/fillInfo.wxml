@@ -1,0 +1,48 @@
+<!--pages/fillInfo/fillInfo.wxml-->
+<van-panel>
+  <van-field
+    required
+    clearable
+    value="{{name}}"
+    label="收货人姓名"
+    placeholder="请输入收货人姓名"
+    bind:change="changeName"
+  />
+  <van-field
+    required
+    clearable
+    value="{{phone}}"
+    label="收货人电话"
+    type="number"
+    maxlength='11'
+    placeholder="请输入收货人电话"
+    bind:change="changePhone"
+  />
+  <van-field
+    required
+    value="{{address_brief}}"
+    label="收货人地址"
+    placeholder="请选择收货人地址"
+    readonly
+    icon="wap-home"
+    bind:click-icon="selectAddress"
+  />
+  <van-field
+    required
+    clearable
+    value="{{address}}"
+    label="具体地址"
+    placeholder="请输入具体地址"
+    bind:change="changeAddress"
+  />
+</van-panel>
+
+<van-panel>
+  <van-button size="large"  type="danger" bind:click="changeContactInfo"> 确认更改</van-button>
+</van-panel>
+
+<van-popup show="{{show}}" position="bottom" bind:close="closePop">
+    <van-area area-list="{{areaList}}" value="110101" bind:confirm="popConfirm"/>
+</van-popup>
+
+<van-notify id="van-notify" />

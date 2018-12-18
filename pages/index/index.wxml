@@ -1,0 +1,39 @@
+<swiper indicator-dots='{{true}}'>
+  <block wx:for="{{goods}}" wx:key="id">
+    <swiper-item>
+      <navigator url='../detail/detail?good_id={{item.good_id}}&good_price={{item.good_price}}&good_description={{item.good_description}}&image_url={{item.image_url}}&good_name={{item.good_name}}'>
+      <image class='swiper-image' mode='top' src='{{item.image_url}}'></image>
+        </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+<van-panel title="商品列表">
+  <block wx:for="{{goods}}" wx:key="id">
+    <view>
+      <view>
+        <navigator url='../detail/detail?good_id={{item.good_id}}&good_price={{item.good_price}}&good_description={{item.good_description}}&image_url={{item.image_url}}&good_name={{item.good_name}}'>
+          <van-card num="销量{{item.good_sales}}" price="{{item.good_price}}" desc="{{item.good_abstract}}" title="{{item.good_name}}" thumb="{{item.image_url}}" num-class='zan-font-17' price-class='zan-c-red'>
+          </van-card>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</van-panel>
+<!-- <view class='good_list'>
+  <block wx:for="{{goods}}">
+    <view>
+      <view>
+        <van-card num="销量：{{item.good_num}}" price="{{item.price}}" desc="{{item.descripe}}" title="{{item.title}}" thumb="{{item.image}}" thumb-link='../detail/detail?good_id={{item.good_id}}&price={{item.price}}&desc={{item.descripe}}&imageUrl={{item.image}}&good_num={{item.good_num}}'>
+          <view slot="footer">
+            <van-stepper id='{{index}}' value="{{item.good_num}}" min="0" bind:change="onChange" />
+          </view>
+        </van-card>
+      </view>
+    </view>
+
+  </block>
+  <van-submit-bar button-text="加入购物车" bind:submit="addToCart" />
+</view> -->

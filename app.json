@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+
+    "pages/orders/orders",
+    "pages/order_detail/order_detail",
+
+    "pages/cart/cart",
+
+    "pages/fillInfo/fillInfo",
+    "pages/fillOrder/fillOrder",
+    
+
+    "pages/selectUser/selectUser"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "易买",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "我的订单"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+<!--pages/cart/cart.wxml-->
+<scroll-view>
+<van-panel>
+  <block wx:for="{{shopping_lists}}" wx:key="id" wx:for-index="bindex">
+    <van-card
+      price="{{item.good_price}}"
+      desc="{{item.desc}}"
+      title="{{item.good_name}}"
+      thumb="{{item.image_url}}"
+      price-class='zan-c-red'>
+      <view slot="footer">
+        <van-stepper value="{{item.good_num}}" bind:change="changeGoodNum" id='{{bindex}}' min="0"/>
+      </view>
+    </van-card>
+  </block>
+</van-panel>
+<van-submit-bar
+  price="{{totalMoney*100}}"
+  button-text="去支付"
+  bindtap='jumpToFillOrder'/>
+  </scroll-view>
+<van-notify id="van-notify" />

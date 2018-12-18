@@ -1,0 +1,29 @@
+<block wx:for="{{orders}}" wx:key="order_id">
+
+  <van-panel use-footer-slot>
+    <block wx:for="{{item.goods}}" wx:for-item="good" wx:key="name">
+      <van-cell title=" {{good.name}} x{{good.good_num}}" value="¥ {{ good.good_price }}" border="{{ false }}" />
+    </block>
+
+    <!-- <van-cell title="总价" value="¥ {{item.total_price}}" border="{{ false }}" size="large" /> -->
+    <van-row gutter="20">
+      <van-col offset="1">
+        <view class='orders-font-bold'>总价</view>
+      </van-col>
+      <van-col offset="14">
+        <view class='orders-font-bold'>¥ {{item.total_price}}</view>
+      </van-col>
+    </van-row>
+
+    <view slot="footer">
+      <van-row gutter="20">
+        <van-col offset="17">
+          <navigator url="../order_detail/order_detail?order_id={{item.order_id}}&user_id={{item.user_id}}">
+            <van-button size="small" type="danger">查看详情</van-button>
+          </navigator>
+        </van-col>
+      </van-row>
+    </view>
+  </van-panel>
+
+</block>

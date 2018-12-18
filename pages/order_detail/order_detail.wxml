@@ -1,0 +1,49 @@
+<van-cell-group>
+<view class='orders orders__detail orders__detail-row'>
+  <view class='orders__left-col orders-font-22 orders-font-bold'>{{user_name}}
+  </view>
+  <text class='orders__right-col'>{{phone_num}}
+  </text>
+</view>
+<view class='orders orders__detail orders__detail-row'>{{address}}</view>
+</van-cell-group>
+
+<van-cell-group>
+<view class='orders orders__detail orders-font-22 orders-font-bold'> 交易信息 </view>
+<view class='orders'>
+  <view class='orders__detail'>
+    <block wx:for="{{goods}}" wx:key="name">
+      <view class='orders__detail-row'>
+        <view class='orders__right-col'>¥{{item.price}} x{{item.number}}</view>
+        <view class='orders__left-col'>{{item.name}}</view>
+      </view>
+    </block>
+    <view class='orders__detail-row orders-font-bold'>
+      <view class='orders__right-col'>{{cost}}</view>
+      <view class='orders__left-col'>总价</view>
+    </view>
+  </view>
+</view>
+</van-cell-group>
+
+<van-cell-group>
+<view class='orders orders__detail orders-font-22 orders-font-bold'> 订单信息 </view>
+<view class='orders orders__detail orders__detail-row'>
+  <view class='orders__left-col'>订单状态：已支付
+  </view>
+</view>
+<view class='orders orders__detail orders__detail-row'>
+  <view class='orders__left-col'>下单时间：{{order_time}}
+  </view>
+</view>
+<view class='orders orders__detail orders__detail-row'>
+  <view class='orders__left-col'>付款方式： 微信支付
+  </view>
+</view>
+<view class='orders orders__detail orders__detail-row'>
+  <view class='orders__left-col'>订单备注：无
+  </view>
+</view>
+<view class='orders orders__detail orders__detail-row'>订单编号：{{order_id}}
+</view>
+</van-cell-group>

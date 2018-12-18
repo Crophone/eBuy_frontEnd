@@ -1,0 +1,27 @@
+<!--pages/fillOrder/fillOrder.wxml-->
+<scroll-view>
+<van-panel use-header-slot use-footer-slot>
+  <text space='nbsp'> 收货人:{{name}}\n  电话：{{phone}}\n  地址：{{address}}\n</text>
+  <view slot="footer">
+    <van-button size="large" round type="danger" bind:click='changeInfo'>更改联系信息</van-button>
+  </view>
+</van-panel>
+<van-panel>
+  <block wx:for="{{shopping_lists}}" wx:key="{{item.id}}">
+    <van-card
+      price="{{item.good_price}}"
+      num="{{item.good_num}}"
+      desc="{{item.desc}}"
+      title="{{item.good_name}}"
+      thumb="{{item.image_url}}"
+      price-class='zan-c-red'>
+    </van-card>
+  </block>
+</van-panel>
+</scroll-view>
+<van-submit-bar
+  price="{{totalMoney*100}}"
+  button-text="提交订单"
+  bind:submit="postOrder"
+/>
+<van-notify id="van-notify" />
